@@ -1,68 +1,21 @@
 language: minimal
+
 services: docker
+
 env:
-  matrix:
-    - DOCKER_COMPOSE_VERSION=1.25.5
-  global:
-    - secure: kU+VWieuG4OXF+JqN34ujHyXO0dOXZiXhAlylmbDfAJGNZDwbozSYHd9BB0r9IweWKw8oYghsQ/0j7ijnaW+e2YCoKYrbp4sq5CJDn2BtiAnkwkf75q9Et9DaLS7Vu/DNFrBSy7SJcnQw0slTRfZeJtMWJ72RWTGhvQN1bgldYgcfdPnFt1Fa6cVFq1VlZO1chf6hpssDU9Pb6v4OmlkY1eeC18i/nJWoBYl87vGbl26WJkSsKgHS9xu3MeZ2rSHFUXRN9AXY/eFeNBbqBYa9rhDb8cvzyNeCBYHZ1PPKHFLf2tU3H9yDIc78SWpnWcSdQPysSXz4zGhtuvPURN6eKE362sNfWGyFDtuB/dB6rgk0MCYQDMG5Va4XWH8MMtSfcXdJcM9tEJHDoSoNMQwrJoUqsklRTVw/zSONKgK1WTsRmgeQeRa2f6eTVHEVdJhhcHC5HFDS5jiDBAjpkRFhKiteTuDuix5ysabbTCUDTROUMYdR2FaiNWMvu+Ps4yD3a6iI13lLtOmVv63A+l/oS9kzBO/SQllIieulIlODB68mqcIPDQ8CrEJl6hMoZCCrVnzNhPsGNAtrvZJm0MGUz4yrGWczl8um5HkLX2X4RFvyvjQ4yNZ9Q8cDpep4nYIwZp9iOzicK6tAxfeC/9fBc9/iipwaDPy+8MbPnqsURk=
-    - secure: df9yvGlX+icRVTqbQm2X4l7ZijzY1Tna7tbjNWpGDXHxULN8of3SsgbtS37/b1jqZW1+9v5/YQ0JCzVaWrNwLoeJqBHbRccH7t6cJBhU3KeJG1wr19WlaBolRjXGA7aOWidxtI8ol8znWFQluzUjumsGvccL9bCry9/VO5ijNFcwsIxZ84FgMUshWWBIFJKbFWAAnWRdE3OeoD+9DE3anWyaPKknrCPERQPQLZxgz+kFGefnNSoAAJFlKZb+FfRRSzk2A/U4eWh8EM0jw6kPlWCHIs0GP9P3Al2bJPrG+Ly87OCaNxAGCshycizMcuYJyqV+lPd9vtx+Pg9uhU9/17oxSvNOSDCl/46rUi3TMYDdpqwQ4E0Wx9WQjKnsdpGI6WM8e21Wv1E2FloRSVNDuoiJYmVpTfwD+0MmQSlI15X09hN/T0aXOYp//27VMljlFfKaLArvs0nP5drda0+HmdKFmFs2MZlewk/NuWTV+8JeMgEedq6OOX7cnnjpy9cZJIc35MpUplkhAiw8EzpDWb/pElwBsiOoXMs4gpd9whrHl/qg4c7L9oNCJ4DPohL2opec/DTfRDdK5/J0z2dtkUIs6Vhl9sJcybKKvZQLJZMdg29yGPnOYk+eYMVM9Kmq71weUflCWUX1zd8pPQposZ/Xesyq1DSPx3PJxzubXOs=
-    - secure: PhuWywjjIcIGVzwN3eIQIkhLtGQM98aOeAnNYAz4lfKkRsqFyzD2y9eyN9UzjIOQT2r2vfqdb3BVCPMD1/yGt5wLhMQbjdc95gKIJGAyUlnvCU5qVyhjUTgzLAeDOZCX2I89vI5V+Cpm92ToohOtvuwJw9lhShDh/vQrmnXjdmDKKfuU+JKjlcOBTntkngK5QL9vCuFvZEPT9NLryDbHKzSB+3o/LEFiVIA73vAlgHmEPKmJKILrLA0NWg8N1RCIYu4n3caREIvb0W23Rzowx8U0HUAYInnIgOD3r+z4kLtwy5n2Qvt5/DgZPV674UZwyexrx4XD/m41QXsbeP8bUyDGm8Pt4kjLf5vXiFa9V43an3eoGzZ4bYVcRe10grU72GX9t8/onrNZJEjLzrzQExz5k1jn6eDJGvWVrmSV6vBW2O4xro6atnHxvSye7j7SIuILyahrUdmvYL9IUbFGPDdhu9Vbh3+xaxm8htYJVI776hUHeGOI3JZzx7FaxSOZneMuPm+6GEDQkSszRjoDb2NmYlIo2VWQyzW9tvIMilmrePfne0fVAh1q+3r+qt6of37RsorX7uM4tQfkX89GQ58Liu3o9qnAwteAxfpzI6x6BCdfFQbcW2RzHyGbqFMRveVgXBxcka2kDHGu8a3dUJWV03Wc3uBZmsVDh+D1aOA=
-    - secure: 0tTbW0b/drZWAlUo0iDqhQ00QDhEF+Ed2wf/2/aY5QqSKAaIQM9Obvg+hhTJQr5ZSxMskrSEsOZXW4C3ZQ3EvPz4lD/eVNcRIu8lu3RvKKhqymXZzXYXEukcNthGv8yDPRp28CBE2702tjgT0MhBBWirHCrRTZCQ3vfw6UluwY27uDuBjUsyU2ftEJS3dubsZ+3Dj9hl45JCV0vmMY071nT16f5n1fjv8rBGy1uUVdr7NnQA1bRdwISD8Dl1GuMyVPG03Bdl5VG69tXUcvZuNnEw5zPpGnatKAWvoe3qNKf4xYGOHtYbHJ0ZvYdGjGpR74HprAxTO9OLtWlIRAau4WFlHTSM4EPG2exuaIHltZJOJlXSz6fNCN7JoNEFpPz9LMyIXXxIPchfzuayKxO/HPccxlfvwH17inVVqVB7czb+ukz1q7Q+AxTg2yt3YZs2arei64g7+uEhgEA+HWQhhUqv7uSMLTDJmPrbu6U8fK9iSZGzS7mMTUEqmc7tillUPMtg/6URdt15c//OZGmR2d4Q62hzceGOieKg7/+mJ7RifWXN0fEzfrTSwGVcvBi0vm3Lx0yO6TG+uXnOa1ljV9AQBt3ziqCR+e87PaTvc08saU4AlCbqFtAuYPIKTAW8N2okO7lVmmuHmHKP9ncDebpduOQkdykTCV3FvaE+zxw=
+  - DOCKER_COMPOSE_VERSION=1.23.2
+
 before_install:
-  # install docker
   - docker -v && docker-compose -v
   - sudo rm /usr/local/bin/docker-compose
-  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname
-    -s`-`uname -m` > docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
-
-  # install kubenetes
   - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
 
-  # aws authenticator
-  - curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.15.10/2020-02-22/bin/linux/amd64/aws-iam-authenticator
-  - chmod +x ./aws-iam-authenticator
-  - sudo mv ./aws-iam-authenticator /usr/local/bin/
-  - aws-iam-authenticator version
 
-  # cluster config
-  - mkdir -p ${HOME}/.kube
-  - cp udagram-deployment/eks/kubeconfig-template.yaml ${HOME}/.kube/config
-  - export KUBECONFIG=${HOME}/.kube/config
-  - kubectl config set clusters.kubernetes.certificate-authority-data "$CERTIFICATE"
-  - kubectl config set clusters.kubernetes.server "$ENDPOINT"
-  - kubectl get deployments
-  - kubectl version
 
-jobs:
-  include:
-    - stage: dockerize
-      script:
-        - cd udagram-deployment/docker
-        - docker-compose -f docker-compose-build.yaml build --parallel
-        - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_LOGIN" --password-stdin
-        - docker-compose -f docker-compose-build.yaml push
-        - echo "$DOCKER_HUB_PASSWORD" | docker login -u "$DOCKER_HUB_LOGIN" --password-stdin
-        - docker-compose -f docker-compose-build.yaml push
-
-    - stage: aws_eks_deploy
-      script:
-        - cd udagram-deployment/k8s
-        - kubectl apply -f backend-feed-service.yaml
-        - kubectl apply -f backend-user-service.yaml
-        - kubectl apply -f frontend-service.yaml
-        - kubectl apply -f reverseproxy-service.yaml
-        - kubectl apply -f aws-secret.yaml
-        - kubectl apply -f env-configmap.yaml
-        - kubectl apply -f env-secret.yaml
-        - kubectl apply -f backend-feed-deployment.yaml
-        - kubectl apply -f backend-user-deployment.yaml
-        - kubectl apply -f frontend-deployment.yaml
-        - kubectl apply -f reverseproxy-deployment.yaml
-
-branches:
-  only:
-    - master
+install:
+  - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml build --parallel 
