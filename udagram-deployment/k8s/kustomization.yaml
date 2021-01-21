@@ -1,0 +1,7 @@
+secretGenerator:
+- name: env-secret
+  literals:
+  - POSTGRESS_USERNAME=klay
+  - POSTGRESS_PASSWORD=basket12
+generatorOptions:
+  disableNameSuffixHash: true
