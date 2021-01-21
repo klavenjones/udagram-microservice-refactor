@@ -1,5 +1,4 @@
 node_modules
-udagram-config.yaml.eksctl
-udagram-config.yaml
 set_env.sh
 .env
+eks
