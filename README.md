@@ -11,7 +11,7 @@ The project is split into three parts:
 ## Links
 
 - Docker hub images found [here](https://hub.docker.com/u/klavenj)
-- Screenshots are documented and found in the [screenshots](screenshots) directory
+- Screenshots are documented and found in the [screenshots](/screenshots) directory
 
 ## Docker Build Steps
 
@@ -121,7 +121,6 @@ Travis has been configured to carry out the following CI/CD operations:
 
 - Build the docker images
 - Push the docker images to Docker Hub
-- Automatically deploy the new images to AWS EKS
 
 ### Rolling Updates
 
