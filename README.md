@@ -77,7 +77,7 @@ kubectl apply -f reverseproxy-service.yaml
 Check the deployment:
 
 ```
-kubectl get pod 
+kubectl get pod
 kubectl get deployment
 ```
 

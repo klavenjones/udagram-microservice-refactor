@@ -74,7 +74,7 @@ router.post('/login', async (req: Request, res: Response) => {
     }
 
     // check that the password matches
-    const authValid = await comparePasswords(password, user.password_hash)
+    const authValid = await comparePasswords(password, user.passwordHash)
 
     if(!authValid) {
         return res.status(401).send({ auth: false, message: 'Unauthorized' });
@@ -111,7 +111,7 @@ router.post('/', async (req: Request, res: Response) => {
 
     const newUser = await new User({
         email: email,
-        password_hash: password_hash
+        passwordHash: password_hash
     });
 
     let savedUser;
